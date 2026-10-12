@@ -1,7 +1,8 @@
 import React from 'react';
-import { Briefcase, Calendar, MapPin, CheckCircle2, ArrowRight, ShieldCheck, HardHat, Compass } from 'lucide-react';
+import { Briefcase, Calendar, MapPin, CheckCircle2, ArrowRight, ShieldCheck, HardHat, Phone, Award, UserCheck } from 'lucide-react';
 import { motion } from 'motion/react';
 import { experienceData, internshipReadiness } from '../data/experience';
+import { profileData } from '../data/profile';
 
 export default function Experience() {
   const scrollToContact = (e) => {
@@ -23,21 +24,21 @@ export default function Experience() {
         {/* Section Header */}
         <div className="max-w-3xl mb-12 sm:mb-16">
           <span className="text-xs font-bold uppercase tracking-widest text-accentBlue block mb-2">
-            PRACTICAL TRAINING &amp; EXPERIENCE
+            PROVEN WORK HISTORY
           </span>
           <h2
             id="experience-heading"
             className="text-3xl sm:text-4xl font-display font-extrabold text-primaryNavy tracking-tight leading-tight"
           >
-            Engineering Experience &amp; Practicum
+            Work Experience &amp; Field Practice
           </h2>
           <p className="mt-3 text-base sm:text-lg text-textSecondary leading-relaxed">
-            Academic fieldwork, laboratory testing, and practical engineering training developed at National University of Battambang.
+            Verified construction and civil engineering field experience in surveying, site supervision, and infrastructure development across Cambodia.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
-          {/* Left Column: Practicum Timeline & Experience Cards (8 cols) */}
+          {/* Left Column: Work Experience Timeline (8 cols) */}
           <div className="lg:col-span-8 space-y-6">
             {experienceData.map((exp, index) => (
               <motion.div
@@ -63,7 +64,7 @@ export default function Experience() {
                   </div>
 
                   <div className="flex flex-col sm:items-end text-xs text-textSecondary gap-1 shrink-0">
-                    <span className="inline-flex items-center gap-1 font-medium">
+                    <span className="inline-flex items-center gap-1 font-semibold text-primaryNavy bg-lightBg px-2 py-0.5 rounded border border-[#D9E2EC]">
                       <Calendar className="w-3.5 h-3.5 text-accentBlue" />
                       {exp.period}
                     </span>
@@ -79,10 +80,10 @@ export default function Experience() {
                   {exp.description}
                 </p>
 
-                {/* Key Practicum Activities */}
+                {/* Key Responsibilities */}
                 <div className="mt-4 space-y-2">
                   <h4 className="text-xs font-bold uppercase tracking-wider text-textPrimary">
-                    Key Practical Activities:
+                    Key Work Responsibilities:
                   </h4>
                   <ul className="space-y-1.5">
                     {exp.responsibilities.map((resp, idx) => (
@@ -108,16 +109,73 @@ export default function Experience() {
               </motion.div>
             ))}
 
-            {/* Academic Integrity Note */}
-            <div className="p-4 rounded-xl bg-lightBg/70 border border-[#D9E2EC] text-xs text-textSecondary flex items-start gap-2.5">
-              <ShieldCheck className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-              <span>
-                <strong>Academic Disclosure:</strong> Experience records represent verified academic laboratory practicums, field surveys, and hands-on coursework under engineering faculty supervision.
-              </span>
+            {/* References Card */}
+            <div id="references" className="pt-4 scroll-mt-24">
+              <div className="p-6 sm:p-7 rounded-2xl bg-lightBg/80 border border-[#D9E2EC] shadow-subtle space-y-4">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-xl bg-paleBlue text-accentBlue flex items-center justify-center shrink-0">
+                    <UserCheck className="w-5 h-5" aria-hidden="true" />
+                  </div>
+                  <div>
+                    <span className="text-xs font-bold uppercase tracking-wider text-accentBlue block">
+                      VERIFIED ACADEMIC REFERENCE
+                    </span>
+                    <h3 className="font-display text-lg font-bold text-primaryNavy">
+                      Professional References
+                    </h3>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                  {profileData.references.map((ref) => (
+                    <div
+                      key={ref.name}
+                      className="p-4 rounded-xl bg-white border border-[#D9E2EC] shadow-xs flex flex-col justify-between"
+                    >
+                      <div>
+                        <h4 className="font-bold text-sm sm:text-base text-primaryNavy">
+                          {ref.name}
+                        </h4>
+                        <p className="text-xs sm:text-sm text-secondaryNavy font-medium mt-0.5">
+                          {ref.position}
+                        </p>
+                        <p className="text-xs text-textSecondary mt-0.5">
+                          {ref.institution}
+                        </p>
+                      </div>
+
+                      <div className="mt-3 pt-3 border-t border-[#D9E2EC] flex items-center justify-between">
+                        <span className="text-xs text-textSecondary">Direct Contact:</span>
+                        <a
+                          href={ref.telLink}
+                          className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-paleBlue text-primaryNavy hover:text-accentBlue text-xs font-bold transition-colors"
+                        >
+                          <Phone className="w-3.5 h-3.5 text-accentBlue" />
+                          <span>{ref.tel}</span>
+                        </a>
+                      </div>
+                    </div>
+                  ))}
+
+                  <div className="p-4 rounded-xl bg-white border border-[#D9E2EC] shadow-xs flex flex-col justify-center">
+                    <div className="flex items-start gap-2.5">
+                      <ShieldCheck className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
+                      <div>
+                        <h4 className="font-bold text-xs uppercase tracking-wider text-primaryNavy">
+                          Official Curriculum Endorsement
+                        </h4>
+                        <p className="text-xs text-textSecondary mt-1 leading-relaxed">
+                          Reference provided by faculty leadership at National University of Battambang (NUBB) in support of civil engineering qualifications.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
-          {/* Right Column: Internship & Trainee Readiness Card (4 cols) */}
+          {/* Right Column: Site Engineer Availability Card (4 cols) */}
           <div className="lg:col-span-4">
             <motion.div
               initial={{ opacity: 0, y: 15 }}
@@ -132,7 +190,7 @@ export default function Experience() {
                   <span>{internshipReadiness.status}</span>
                 </div>
                 <h3 className="font-display text-xl font-bold text-primaryNavy">
-                  Ready to Build Practical Experience
+                  {internshipReadiness.targetRole}
                 </h3>
                 <p className="text-xs sm:text-sm text-textSecondary mt-2 leading-relaxed">
                   {internshipReadiness.message}
@@ -143,7 +201,7 @@ export default function Experience() {
               <div className="space-y-3 pt-3 border-t border-[#D9E2EC]">
                 <h4 className="text-xs font-bold uppercase tracking-wider text-textPrimary flex items-center gap-1.5">
                   <HardHat className="w-4 h-4 text-accentBlue" />
-                  Target Trainee &amp; Intern Roles:
+                  Key Position Targets:
                 </h4>
                 <ul className="space-y-2">
                   {internshipReadiness.targetRoles.map((role, idx) => (
@@ -159,10 +217,13 @@ export default function Experience() {
               </div>
 
               {/* Availability */}
-              <div className="p-3 rounded-lg bg-lightBg border border-[#D9E2EC] text-xs">
-                <span className="text-textSecondary block">Availability Window:</span>
-                <span className="font-bold text-primaryNavy mt-0.5 block">
-                  {internshipReadiness.availability}
+              <div className="p-3.5 rounded-xl bg-lightBg border border-[#D9E2EC] text-xs space-y-1">
+                <span className="text-textSecondary block font-medium">Location Base:</span>
+                <span className="font-bold text-primaryNavy block">
+                  Battambang Province &amp; Surrounding Regions
+                </span>
+                <span className="text-textSecondary block text-[11px] pt-1 border-t border-[#D9E2EC]">
+                  Current Status: Employed as Survey Officer at K.B.H Construction Co.,Ltd
                 </span>
               </div>
 
@@ -172,7 +233,7 @@ export default function Experience() {
                 onClick={scrollToContact}
                 className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-primaryNavy hover:bg-darkNavy text-white font-semibold text-sm transition-all shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-accentBlue active:scale-98"
               >
-                <span>Inquire for Internships</span>
+                <span>Contact for Employment</span>
                 <ArrowRight className="w-4 h-4" />
               </a>
             </motion.div>

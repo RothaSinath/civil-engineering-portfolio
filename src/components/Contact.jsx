@@ -74,13 +74,13 @@ export default function Contact() {
                   </div>
                   <div>
                     <span className="text-xs font-semibold uppercase text-textSecondary block">
-                      Location
+                      Current Address &amp; Location
                     </span>
                     <span className="text-sm sm:text-base font-bold text-primaryNavy">
                       {profileData.location}
                     </span>
-                    <span className="text-xs text-textSecondary block">
-                      National University of Battambang
+                    <span className="text-xs text-textSecondary block mt-0.5">
+                      {profileData.currentAddress || "Ek Phnom District, Battambang Province, Cambodia"}
                     </span>
                   </div>
                 </div>

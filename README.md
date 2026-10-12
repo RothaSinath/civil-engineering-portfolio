@@ -43,12 +43,13 @@ The portfolio features a clean, professional aesthetic inspired by civil enginee
 3. **Featured Engineering Projects**: 5 sample academic concept cards (Structural Analysis, AutoCAD Drafting, Soil Mechanics, Highway Design, Construction Management) plus a "More Projects Coming Soon" capstone card.
 4. **Project Details Modal**: Accessible dialog displaying objectives, scope of work, methodology, tools, and clear sample-concept notices.
 5. **About Me**: Professional biography and three engineering value cards (Technical Precision, Continuous Learning, Sustainable Infrastructure).
-6. **Technical Skills**: Four categorized competency cards with honest academic study badges (AutoCAD, MATLAB, Structural Analysis, Geotechnical, Project Planning).
-7. **Education**: Dedicated card displaying Bachelor of Engineering, Civil Engineering department, 5-year curriculum duration, and graduation placeholder.
-8. **Relevant Coursework**: Expandable course grid across 5 disciplines with "Show All Coursework / Show Less" toggle.
-9. **Career Objective**: Restrained navy section with 3 career interest pillars and a direct contact link.
-10. **Contact Section & Form**: Telephone (092850199), location (Cambodia), validated contact form, and clear feedback.
-11. **Footer**: Copyright year, student name, and "Back to Top" smooth scroll.
+6. **Technical Skills**: Four categorized competency cards (Autodesk Robot, AutoCAD, Structural Analysis, Geotechnical, Project Planning).
+7. **Education & Certifications**: Bachelor Degree of Civil Engineering (NUBB, 2020–2025), Ek Phnom High School, plus certified training in Autodesk Robot, AutoCAD, Baktouk IT, and English Course Level 6.
+8. **Work Experience & References**: Proven industry history (Survey Officer at K.B.H Construction Co.,Ltd; Intern Site Engineer; Chainman at ILSUNG KUMHO JV Co.,Ltd) plus verified Academic Reference (**Mr. No Sinat, Professor at NUBB, Tel: 012 543 334**).
+9. **Relevant Coursework**: Expandable course grid across 5 disciplines with "Show All Coursework / Show Less" toggle.
+10. **Career Objective**: Targeted application for Site Engineer based in Battambang with direct contact action.
+11. **Contact Section & Form**: Telephone (`092850199`), Gmail (`tysophally@gmail.com`), Battambang residential address, validated contact form, and direct calling links.
+12. **Footer**: Dynamic year, student name, and "Back to Top" smooth scroll.
 
 ---
 

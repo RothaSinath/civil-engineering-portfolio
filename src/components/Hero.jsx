@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { User, GraduationCap, School, MapPin, ArrowDown, Mail, Download, ShieldCheck } from 'lucide-react';
+import { User, GraduationCap, School, MapPin, ArrowDown, Mail, Download, ShieldCheck, Phone } from 'lucide-react';
 import { motion } from 'motion/react';
 import { profileData } from '../data/profile';
 import EngineeringBackground from './EngineeringBackground';
@@ -147,6 +147,30 @@ export default function Hero() {
                   <span>Download CV</span>
                 </a>
               )}
+            </div>
+
+            {/* Direct Quick Contact Strip */}
+            <div className="flex flex-wrap items-center gap-3 pt-3 text-xs text-textSecondary border-t border-[#D9E2EC]/70">
+              <a
+                href={`tel:${profileData.phone}`}
+                className="inline-flex items-center gap-1.5 font-bold text-primaryNavy hover:text-accentBlue transition-colors bg-white px-2.5 py-1 rounded-lg border border-[#D9E2EC] shadow-2xs"
+                title="Call Ty Sophally"
+              >
+                <Phone className="w-3.5 h-3.5 text-accentBlue" />
+                <span>{profileData.phone}</span>
+              </a>
+              <a
+                href={`mailto:${profileData.email}`}
+                className="inline-flex items-center gap-1.5 font-bold text-primaryNavy hover:text-accentBlue transition-colors bg-white px-2.5 py-1 rounded-lg border border-[#D9E2EC] shadow-2xs"
+                title="Email Ty Sophally"
+              >
+                <Mail className="w-3.5 h-3.5 text-accentBlue" />
+                <span>{profileData.email}</span>
+              </a>
+              <span className="inline-flex items-center gap-1 text-secondaryNavy font-medium">
+                <MapPin className="w-3.5 h-3.5 text-accentBlue" />
+                <span>Battambang, Cambodia</span>
+              </span>
             </div>
           </motion.div>
 
