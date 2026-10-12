@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%" fill="none">
+  <rect width="600" height="400" fill="#0B2545" />
+
+  <!-- Soil Stratigraphy Layers -->
+  <!-- Layer 1: Fill / Topsoil -->
+  <rect x="0" y="160" width="600" height="60" fill="#1E3A5F" fill-opacity="0.4" stroke="#334E68" stroke-width="1" />
+  <text x="30" y="195" font-family="sans-serif" font-size="11" fill="#94A3B8">Layer 1: Silty Clay Topsoil (γ = 17.5 kN/m³)</text>
+
+  <!-- Ground Level Marker (GL) -->
+  <line x1="0" y1="160" x2="600" y2="160" stroke="#10B981" stroke-width="2.5" />
+  <text x="540" y="152" font-family="sans-serif" font-size="11" font-weight="bold" fill="#10B981">▼ GL ±0.00</text>
+
+  <!-- Layer 2: Medium Dense Sand -->
+  <rect x="0" y="220" width="600" height="90" fill="#1A365D" fill-opacity="0.7" stroke="#334E68" stroke-width="1" />
+  <text x="30" y="260" font-family="sans-serif" font-size="11" fill="#94A3B8">Layer 2: Medium Dense Sand (c' = 0, φ' = 32°)</text>
+
+  <!-- Water Table Level -->
+  <line x1="0" y1="230" x2="600" y2="230" stroke="#38BDF8" stroke-width="1.5" stroke-dasharray="6 3" />
+  <polygon points="530,230 540,220 550,230" fill="#38BDF8" />
+  <text x="560" y="226" font-family="sans-serif" font-size="10" fill="#38BDF8">▼ GWT -1.8m</text>
+
+  <!-- Layer 3: Stiff Clay Bedrock -->
+  <rect x="0" y="310" width="600" height="90" fill="#0E2439" stroke="#334E68" stroke-width="1" />
+  <text x="30" y="350" font-family="sans-serif" font-size="11" fill="#94A3B8">Layer 3: Dense Sandstone / Stiff Silt (c' = 45 kPa)</text>
+
+  <!-- Concrete Column and Spread Footing -->
+  <g transform="translate(300, 70)">
+    <!-- Column -->
+    <rect x="-25" y="0" width="50" height="150" fill="#E2E8F0" stroke="#3B82F6" stroke-width="2" />
+    <!-- Column Load P -->
+    <path d="M 0 -35 L 0 -5 M -6 -15 L 0 -5 L 6 -15" stroke="#EF4444" stroke-width="3" />
+    <text x="0" y="-42" font-family="sans-serif" font-size="13" font-weight="bold" fill="#EF4444" text-anchor="middle">P = 850 kN</text>
+
+    <!-- Trapezoidal / Stepped Pad Footing -->
+    <polygon points="-90,150 90,150 110,185 -110,185" fill="#CBD5E1" stroke="#3B82F6" stroke-width="2" />
+    <!-- Lean concrete blinding -->
+    <rect x="-115" y="185" width="230" height="10" fill="#94A3B8" />
+
+    <!-- Bearing Pressure Bulb Under Footing (Stress contours) -->
+    <path d="M -100 195 Q 0 280 100 195" fill="none" stroke="#F59E0B" stroke-width="2" stroke-dasharray="3 3" />
+    <path d="M -70 195 Q 0 250 70 195" fill="none" stroke="#F59E0B" stroke-width="1.5" stroke-dasharray="3 3" />
+    <text x="0" y="240" font-family="sans-serif" font-size="10" fill="#F59E0B" text-anchor="middle">q_allowable = 180 kPa</text>
+  </g>
+
+  <!-- Dimension Indicator for Depth Df -->
+  <line x1="160" y1="160" x2="160" y2="255" stroke="#E2E8F0" stroke-width="1.5" />
+  <text x="145" y="210" font-family="sans-serif" font-size="11" fill="#E2E8F0" text-anchor="end">Df = 1.50 m</text>
+</svg>

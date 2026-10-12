@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%" fill="none">
+  <defs>
+    <linearGradient id="aboutBg" x1="0" y1="0" x2="800" y2="600" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#102A43" />
+      <stop offset="100%" stop-color="#243B53" />
+    </linearGradient>
+    <pattern id="diagGrid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 0 30 L 30 0 M 0 0 L 30 30" stroke="#3B82F6" stroke-width="0.5" stroke-opacity="0.1" />
+    </pattern>
+  </defs>
+  <rect width="800" height="600" fill="url(#aboutBg)" />
+  <rect width="800" height="600" fill="url(#diagGrid)" />
+
+  <!-- Total Station Surveying Instrument Representation -->
+  <g transform="translate(400, 320)">
+    <!-- Tripod legs -->
+    <line x1="0" y1="-80" x2="-180" y2="240" stroke="#CBD5E1" stroke-width="8" stroke-linecap="round" />
+    <line x1="0" y1="-80" x2="0" y2="250" stroke="#94A3B8" stroke-width="8" stroke-linecap="round" />
+    <line x1="0" y1="-80" x2="180" y2="240" stroke="#E2E8F0" stroke-width="8" stroke-linecap="round" />
+
+    <!-- Feet spikes -->
+    <polygon points="-190,240 -170,240 -180,260" fill="#3B82F6" />
+    <polygon points="-10,250 10,250 0,270" fill="#3B82F6" />
+    <polygon points="170,240 190,240 180,260" fill="#3B82F6" />
+
+    <!-- Tribrach & Base -->
+    <rect x="-45" y="-85" width="90" height="20" rx="4" fill="#334E68" stroke="#627D98" stroke-width="2" />
+    <circle cx="0" cy="-75" r="6" fill="#3B82F6" />
+
+    <!-- Theodolite Body -->
+    <rect x="-35" y="-170" width="70" height="85" rx="6" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="3" />
+    <!-- Optical telescope barrel -->
+    <rect x="-90" y="-145" width="180" height="35" rx="6" fill="#102A43" stroke="#3B82F6" stroke-width="2" />
+    <!-- Objective lens highlight -->
+    <ellipse cx="-90" cy="-127" rx="8" ry="17" fill="#60A5FA" />
+    <circle cx="90" cy="-127" r="12" fill="#0B2545" stroke="#94A3B8" stroke-width="2" />
+
+    <!-- Display Screen -->
+    <rect x="-25" y="-120" width="50" height="30" rx="3" fill="#0F172A" />
+    <text x="0" y="-102" font-family="monospace" font-size="9" fill="#10B981" text-anchor="middle">V: 89°54'12"</text>
+    <text x="0" y="-92" font-family="monospace" font-size="9" fill="#38BDF8" text-anchor="middle">H: 142°18'06"</text>
+
+    <!-- Circular target reticle overhead -->
+    <g transform="translate(0, -220)">
+      <circle cx="0" cy="0" r="35" stroke="#3B82F6" stroke-width="2" stroke-opacity="0.8" fill="none" />
+      <circle cx="0" cy="0" r="20" stroke="#3B82F6" stroke-width="1.5" stroke-dasharray="3 3" fill="none" />
+      <line x1="-45" y1="0" x2="45" y2="0" stroke="#3B82F6" stroke-width="2" />
+      <line x1="0" y1="-45" x2="0" y2="45" stroke="#3B82F6" stroke-width="2" />
+      <circle cx="0" cy="0" r="3" fill="#EF4444" />
+    </g>
+  </g>
+
+  <!-- Technical Overlay Card -->
+  <g transform="translate(60, 480)">
+    <rect width="680" height="65" rx="8" fill="#0B2545" fill-opacity="0.9" stroke="#D9E2EC" stroke-width="1" />
+    <text x="25" y="28" font-family="sans-serif" font-size="14" font-weight="700" fill="#FFFFFF">CIVIL ENGINEERING FIELD STUDY &amp; SURVEYING PRACTICE</text>
+    <text x="25" y="48" font-family="sans-serif" font-size="12" fill="#9FB3C8">Geodetic Benchmarks • Topographical Triangulation • Structural Alignment</text>
+  </g>
+</svg>
